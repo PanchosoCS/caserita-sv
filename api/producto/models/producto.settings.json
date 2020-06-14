@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "Producto"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "NomProducto": {
+      "type": "string"
+    },
+    "Marca": {
+      "type": "string"
+    },
+    "Tamanio": {
+      "type": "string"
+    },
+    "CodProducto": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ValorU": {
+      "type": "integer"
+    },
+    "CantidadMayorista1": {
+      "type": "integer"
+    },
+    "ValorMayorista1": {
+      "type": "integer"
+    },
+    "CantidadMayorista2": {
+      "type": "integer"
+    },
+    "ValorMayorista2": {
+      "type": "integer"
+    },
+    "Foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "pallet_cantidad": {
+      "type": "integer"
+    },
+    "caja_cantidad": {
+      "type": "integer"
+    }
+  }
+}
